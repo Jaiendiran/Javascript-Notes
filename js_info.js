@@ -1,70 +1,9 @@
-				 udmey JAVASCRIPT COURSE
-console.log(string or expression); // is also a function call
-
-// TYPES OF PROGRAMMING :
-	- STATIC = values cant changable.
-
-	- DYNAMIC = values can be changed later.
+				 															 JAVASCRIPT NOTES
 
 
-	- REFERENCE DATA TYPES :
-			
-			|
-OBJECT		| syntax : varname = {key : value, ...}
-			| 
-			| EX :
-			|		let person = { name : 'jai', age : 23 }
-			|
-			|Accessing :
-			|		person.name = 'jai'; [Dot Notation]
-			|		person['name'] = 'jai' [Bracket Notation]
-			|
-			///////////////////////
-			| Array is data structure that used to represent a list of items.
-			|
-ARRAY		| let array = ['jai', 'loves', 'Bikes'] // ARRAY is an OBJET.
-			| array[3] = 'pretty'; // Adding elements to an array.	
-			|console.log(array.length); // Length is one of the property.
-			|
-			////////////////////////
-			|
-			|  Its a Set of statements that performs tasks and calculates values.
-FUNCTIONS	|
-			|	Syntax : function function_name(parameters as variables, lastName){
-			|				// body of the function
-			|				console.log('hai ' + parameter + ' ' + lastName);
-			|			}
-			|
-			|			functon_name(arguments as values, 'sonu'); // Statement
-			|
-			//////////////////////// PERFORMING CALCULATING VALUES :
-			|
-TYPES		|   function square(num){
-			|		    return num * num;
-			|		}
-			|		console.log(square(2));
-			|
-			|
-			|
-			|
 
-- OBJECT ORIENTED PROGAMMING IN JAVASCRIPT :
 
-			| 4 CONCEPTS :
-			|		- ENCAPSULATION (Grouping related variables and functions together to reduce complexity + Re-use in programs.)
-			|		- ABSTRACTION (Reduces the impact of change)
-			|		- INHRITANCE (Mechanism to eliminate redundant code)
-			|		- POLYMORPHISM (mechanism to eliminate long if--else and switch--case statements)
-			|
-			|
-			| DIFF B/W OOP & PROCEDURAL PROGRAMMING :
-			|
-			|	// PROCEDURAL PROGRAMMING is the basic such as values stored in variables and function operate on the data. While project is growing further there'll be lot of functions and variables
-			| 	// will depend upon each other may cause problems.
-			|
-			|	// In other hand, OOP  	
-			|
-			|
+
 	
 	- CODE STRUCTURE :
 
@@ -121,7 +60,7 @@ Comments	|	There are two types of comment. They are,
 			|		"use strict";
 			|
 			|		// this code works the modern way
-			|w		alert('use strict mode.');
+			|		alert('use strict mode.');
 			|		...
 			|		
 			|
@@ -200,7 +139,7 @@ Comments	|	There are two types of comment. They are,
 			|	EX :
 			|			alert( 1 / 0 ); // Infinity
 			|
-			|	NaN represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+			|	NaN (NOT a NUMBER) represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
 			|
 			|	EX:
 			|			alert( "not a number" / 2 ); // NaN, such division is erroneous
@@ -641,13 +580,13 @@ Comments	|	There are two types of comment. They are,
 			#
 			|
 			|
-'MULTIPLY ?'|	A sequence of question mark ? operators allows returning a value that depends on more than one condition. // Same as else..if
+'MULTIPLE ?'|	A sequence of question mark ? operators allows returning a value that depends on more than one condition. // Same as else..if
 			|
 			|	EX:
 			|		let age = prompt('Your age ?', '');
 			|		let value = (age == 0) ? 'Enter any value !':
 			|		    (age < 18) ? 'You are beginner !' :
-			|		    (age <= 24) ? 'You may have experince' :
+			|		    (age <= 24) ? 'You may have some experince' :
 			|		    (age <= 28) ? 'You are well experienced !' :
 			|		    'You are too old :~(';
 			|		alert(value);
@@ -701,7 +640,7 @@ Comments	|	There are two types of comment. They are,
 			|	OR || IN IF STATEMENT :
 			|	EX:	
 			|		let hour = prompt('Enter value :','');
-			|		if(hour < 10 || hour > 18){
+			|		if(hour > 10 || hour < 18){
 			|			alert('The office is closed !');
 			|		}
 			|
@@ -834,7 +773,7 @@ Comments	|	There are two types of comment. They are,
 			|			do{..}While(condtion);
 			|
 			|	EX:
-			|		let num = 0;
+			|		let num = 0;			// The code is executed first, then it checks the condition.
 			|		do{
 			|			alert(num);
 			|			num ++;
@@ -842,7 +781,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			#
 			|
-			|	The FOR loop is the most often used one.
+			|	The x is the most often used one.
 'FOR'		|
 			|	SYNTAX:
 			|			for (begin; condition; step){
@@ -856,7 +795,7 @@ Comments	|	There are two types of comment. They are,
 			|		alert(num); // It doesn't work bcoz the var inside the for loop is inline variable. To make it work we should declare var outside the loop.
 			|
 			|	SKIPPING PARTS :
-			|		You can skip Begin and Step part form for loop.
+			|		You can skip Begin and Step part from for loop.
 			|	EX:
 			|		for (;num<3;num++){			// Removing the Begin part
 			|			// loop body
@@ -875,6 +814,7 @@ Comments	|	There are two types of comment. They are,
 			|			let value = +prompt('Your age ?', '');
 			|			if(!value) break;
 			|			age += value;
+			|			break;		// Exits the loop
 			|		}	
 			|		alert(age);
 			|
@@ -884,12 +824,12 @@ Comments	|	There are two types of comment. They are,
 			|	forces the loop to start a new one (if the condition allows).
 			|
 			|	EX:
-			|		for(num = 0; num <10; num++){
+			|		for(let num = 0; num <10; num++){
 			|			if(num % 2 == 0) continue;
 			|			alert(num);
 			|		}
-			|
-			|	NOTE : CONTINUE AND BREAK WONT WORK IN 'if(condition)? break || continue;'.
+			|	
+			|	NOTE : CONTINUE AND BREAK WONT WORK IN ' ternery conditions : if(condition)? break || continue;'.
 			|
 			#
 			|
@@ -902,14 +842,14 @@ Comments	|	There are two types of comment. They are,
 			|	EX:
 			|		outer : for(let num=0; num<10; num++){
 			|					for(let val=0; val<10; val++){
-			|						let input = prompt(`Enter values are ${num}, ${val}`);
+			|						let input = +prompt(`Enter values for ${num}, ${val}`);
 			|						if(!input){
 			|							break outer;
 			|						} else {
 			|							alert('Done !');
 			|						}
 			|					}
-			|				}d
+			|				}
 			|
 			|
 			|	TASK 1 : PRINT EVEN NUMBER FROM 0 TO 10.
@@ -958,7 +898,7 @@ Comments	|	There are two types of comment. They are,
 			|			}
 			|			
 			|	EX:
-			|		let num = 2 + 2;
+			|		let num = +promt('Enter values between 3 to 5', '');
 			|		switch(num){
 			|				case 3:
 			|					alert('Too small');
@@ -989,7 +929,7 @@ Comments	|	There are two types of comment. They are,
 			|
 'GROUPING OF'|	Several variants of case which share the same code can be grouped.
 'CASE'		|
-			|	EX:
+			|	EXkey: "value", 
 			|		let a = 4 + 4;
 			|		switch(a){
 			|			case 8:
@@ -1047,7 +987,7 @@ Comments	|	There are two types of comment. They are,
 			|	}
 			|
 			|	functionKeyword functionName(parameters || function arguments){
-			|		funcition body (i.e) Code;			// This function is called my its name later.
+			|		function body (i.e) Code;			// This function is called my its name later.
 			|	}
 			|
 			|	functionName();			// Caliing the function name executes the code.
@@ -1216,8 +1156,8 @@ Comments	|	There are two types of comment. They are,
 			|				(a < b)? `${a} is the smallest.` : `${b} is the smallest.`; 
 			|			alert(compare);
 			|		}
-			|		let a = prompt('Enter value for a:');
-			|		let b = prompt('Enter value for b:');
+			|		let a = +prompt('Enter value for a:');
+			|		let b = +prompt('Enter value for b:');
 			|		comparing(a, b);
 			|
 			|
@@ -1235,12 +1175,12 @@ Comments	|	There are two types of comment. They are,
 			|		function showPrimes(n) {
 			|		  nextPrime: for (let i = 2; i < n; i++) {
 			|		    	for (let j = 2; j < i; j++) {
-			|	      			if (i % j == 0) continue nextPrime;
+			|	      			if (i % j == 0) continue nextPrime;			???
 			|		    	}
 			|				alert( i ); // a prime
 			|		  	}
 			|		}
-			|		number = prompt('Enter the value :','');
+			|		number = +prompt('Enter the value :','');
 			|		showPrimes(number);
 			|
 			|
@@ -1338,7 +1278,10 @@ Comments	|	There are two types of comment. They are,
 
 
 
-																		 THE OBJECT BASICS
+
+
+
+														OBJECT ORIENTED PROGAMMING IN JAVASCRIPT 
 
 
 
@@ -1346,6 +1289,23 @@ Comments	|	There are two types of comment. They are,
 
 
 
+
+
+
+			| 4 CONCEPTS :
+			|		- ENCAPSULATION (Grouping related variables and functions together to reduce complexity + Re-use in programs.)
+			|		- ABSTRACTION (Reduces the impact of change)
+			|		- INHRITANCE (Mechanism to eliminate redundant code)
+			|		- POLYMORPHISM (mechanism to eliminate long if--else and switch--case statements)
+			|
+			|
+			| DIFF B/W OOP & PROCEDURAL PROGRAMMING :
+			|
+			|	// PROCEDURAL PROGRAMMING is the basic such as values stored in variables and function operate on the data. While project is growing further there'll be lot of functions and variables
+			| 	// will depend upon each other may cause problems.
+			|
+			|	// In other hand, OOP  	
+			|
 			|		As we know from the chapter Data types, there are seven data types in JavaScript. Six of them are called “primitive”,
 			|	because their values contain only a single thing (be it a string or a number or whatever).
 			|
@@ -1374,7 +1334,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			|	To remove a property, use:
 			|	
-			|		delete user.place;
+			|		delete user.name;
 			|
 			|	Multiword property : Key must be quoted
 			|		
@@ -1393,7 +1353,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			|		alert(user['male']); ------>	Correct way.
 			|
-			|		delet user['male'];
+			|		delete user['male'];
 			|	
 			|		//////////////	
 			|
@@ -1403,7 +1363,7 @@ Comments	|	There are two types of comment. They are,
 			|			'male' = true,
 			|		};
 			|
-			|		let key = prompt('Which key you want to know ?', 'Ex: name');	//	For Ex: key ' male ' show ture.
+			|		let key = prompt('Which key you want to know ?', '');	//	For Ex: key ' male ' show ture.
 			|
 			|		alert( user[key] );
 			|
@@ -1515,9 +1475,9 @@ Comments	|	There are two types of comment. They are,
 			|	let user = { name : 'jai'};
 			|	let admin = user;
 			|
-			|	admin.name = 'sonu';
+			|	admin.age = 24;
 			|
-			|	alert(user.name);	// 'sonu', changes are seen from the "user" reference
+			|	alert(user.age);	// 24, changes are seen from the "user" reference
 			|
 			|
 			|	'COMPARISION BY REFERENCE' :
@@ -1542,7 +1502,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			|
 			|
-			|	'CONT OBJECT ' :
+			|	'CONST OBJECT ' :
 			|
 			|	An object declared as const can be changed.
 			|
@@ -1642,12 +1602,12 @@ Comments	|	There are two types of comment. They are,
 			|		- To delete a property use : delete object.property.	EX: delete user.name;
 			|		- To check the existence of the property use : 'key' in obj;	EX: alert('name' in user);
 			|		- To iterate over an object use : for (let key in obj){...}	EX: for (let key in user) { alert(key) }; 																}
-			|		- To make a reference of an existing object use : Object.assign() method. EX: let clone = Object.assign({}, user);
+			|		- To make a reference of an existing object : Object.assign() method. EX: let clone = Object.assign({}, user);
 			|
 			|
 			|	TASK :
 			|	
-			|		To multiply numeric values by 2 in a object :
+			|		To multiply only numeric values by 2 in a object :
 			|
 			|		let menu = {
 			|			width : 200,
@@ -1771,16 +1731,16 @@ Comments	|	There are two types of comment. They are,
 			|		alert(user[id]);	// We can access data using a symbol as a key.
 			|
 			|
-			|	There will be no conflict, because symbols are always different, even if they have the same name.
+			|	There will be no conflict, because symbols are always unique, even if they have the same name.
 			|
 			|		let user = { name : 'jai' };
 			|		let id1 = Symbol('id');
 			|		
-			|		user[id1] = 'ID value';
+			|		user[id1] = 'Jai';
 			|
 			|		let id2 = Symbol('id');
 			|
-			|		user[id2] = 'New id added';
+			|		user[id2] = 'sonu';
 			|
 			|		alert(user[id2]);
 			|
@@ -1871,7 +1831,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			|
 
-	- OBJECT : THE BASICS : METHOD
+	- OBJECT : METHOD
 
 			|
 			|	'Method Examples' :	
@@ -1948,7 +1908,7 @@ Comments	|	There are two types of comment. They are,
 'INTERNALS'	|	let user = {
 'REFERENCE'	|		name : 'Jai',
 'TYPE'		|		sayHi() {
-			|			alert(this.name);
+			|			alert('Hai' + this.name);
 			|		},
 			|		sayBye() {
 			|			alert('Bye');
@@ -2038,7 +1998,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			|	calc.get();
 			|
-			|	let operator = prompt('What kind of arithmetic operation do you need ?', '');
+			|	let shouldDo = prompt('What kind of arithmetic operation do you need ?', '');
 			|
 			|	alert(calc[shouldDo]());
 			|
@@ -2075,16 +2035,12 @@ Comments	|	There are two types of comment. They are,
 			|		.down()
 			|		.show();
 			|
-			
-		- OBJECT TO PRIMITIVE CONVERSION :
-
+			#
+			|	'OBJECT TO PRIMITIVE CONVERSION' :
 			|
 			|	What happens when objects are added obj1 + obj2, subtracted obj1 - obj2 or printed using alert(obj)?
 			|	
-			|	There are special methods in objects that do the conversion.
-			|
-			|
-			#	
+			|	There are special methods in objects that do the conversion.	
 			|
 'toPrimitive'|
 			|	When an object is used in the context where a primitive is required, for instance, in an alert or mathematical operations, 
@@ -2157,7 +2113,7 @@ Comments	|	There are two types of comment. They are,
 			|		
 			|			[Symbol.toPrimitive](hint) {
 			|				alert(`hint is ${hint}`);
-			|				return hint == 'string' ? this.name : this.age;
+			|				return hint == 'string' ? this.name : this.age;					// inline methods
 			|			},
 			|		};
 			|
@@ -2313,8 +2269,8 @@ Comments	|	There are two types of comment. They are,
 			|
 'RETURN'	|	Usually, constructors do not have a return statement. Their task is to write all necessary stuff into this, and it automatically becomes the result.
 'FROM'		|	But if there is a return statement, then the rule is simple:
-'CONSTRUCTORS'|		- If 'return' is called with 'object', then it is 'returned' instead of this.
-			|		- If 'return' is called with a 'primitive', it’s 'ignored'.
+'CONSTRUCTORS'|		- If 'return' is called with 'object', then it is 'returned' first instead of this.
+			|		- If 'return' is called with a 'primitive' ( i.e ) normal return statement, then it’s 'ignored'.
 			|
 			|	function BigUser() {
 			|		this.name = 'Jini';
@@ -2360,7 +2316,7 @@ Comments	|	There are two types of comment. They are,
 			|
 			|
 			|	let name1 = Symbol.for('user');
-			|	let name2 = Symbol.for('User');
+			|	let name2 = Symbol.for('user');
 			|
 			|	let obj = {
 			|		[name1] : 'Jai',
@@ -2421,7 +2377,7 @@ Comments	|	There are two types of comment. They are,
 			|	function Accumulator(startingValue) {
 			|		this.value = startingValue;
 			|
-			|		this.read = funciton() {
+			|		this.read = function() {
 			|			this.value += +prompt('Enter the value :','');
 			|		};
 			|	}
@@ -2434,94 +2390,100 @@ Comments	|	There are two types of comment. They are,
 			|
 			|
 			|
+
+	-	DATA TYPES :
+
 			|
+			|	More data structures and more in-depth study of the types.
 			|
 			|
+'METHOD OF'	|	Let’s look at the key distinctions between primitives and objects.
+'PRIMITIVES'|
+			|	A primitive :
 			|
+			|		- Is a value of a primitive type.
 			|
+			|		- There are 6 primitive types: string, number, boolean, symbol, null and undefined.
 			|
+			|	An object :
 			|
+			|		- Is capable of storing multiple values as properties.
 			|
+			|		- Can be created with {}, for instance: {name: "John", age: 30}. 
 			|
 			|
+			|	One of the best things about objects is that we can store a function as one of its properties.
 			|
+			#
 			|
+'A PRIMITIVE'|		- Primitives are still primitive. A single value, as desired. 
+'AS AN OBJECT'|		
+			|		- The language allows access to methods and properties of strings, numbers, booleans and symbols.
+			|	
+			|		- When this happens, a special “object wrapper” is created that provides the extra functionality, and then is destroyed.
 			|
 			|
+			|	The “object wrappers” are different for each primitive type and are called: String, Number, Boolean and Symbol. Thus, they provide different sets of methods.
 			|
+			|	For instance, there exists a method str.toUpperCase() that returns a capitalized string.
 			|
+			|		Ex :
 			|
+			|			let str = 'Hello';
+			|			alert( str.toUpperCase() );		// HELLO
 			|
 			|
+			|		- The string str is a primitive. So in the moment of accessing its property, a special object is created that knows the value of the string, 
+			|		  and has useful methods, like toUpperCase().
 			|
+			|		- That method runs and returns a new string (shown by alert).
 			|
+			|		- The special object is destroyed, leaving the primitive str alone.
 			|
 			|
+			|	A number has methods of its own, for instance, toFixed(n) rounds the number to the given precision:
 			|
+			|		EX:
+			|			let n = 1.23456;
+			|			alert(n.toFixed(2));	// 1.23
 			|
 			|
+			|	Some languages like Java allow us to create “wrapper objects” for primitives explicitly using a syntax like new Number(1) or new Boolean(false).
 			|
+			|	In JavaScript, that’s also possible for historical reasons, but highly unrecommended. Things will go crazy in several places.
 			|
+			|	Ex :
 			|
+			|		alert(typeof 1);	// 'Number'
 			|
+			|		alert(typeof new Number(1));	// Object
 			|
 			|
+			|		And because what follows, zero, is an object, the alert will show up:
 			|
 			|
+			|		let zero = new Number(0);
 			|
+			|		if(zero) {
+			|			alert('its true');
+			|		}
 			|
+			#
 			|
+'null &'	|
+'undefined'	|	The special primitives null and undefined are exceptions. They have no corresponding “wrapper objects” and provide no methods. 
+'hav no '	|
+'methods'	|	EX:
 			|
+			|		alert(null.test); // error
 			|
 			|
 			|
+
+	- NUMBERS :
+
 			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
-			|
+			|	
 			|
 			|
 			|

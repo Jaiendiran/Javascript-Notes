@@ -16,6 +16,7 @@
 			|	* 'COMMENTS'
 			|	* 'NINJA CODE'
 			|	* 'AUTOMATED TESTING'
+			|	* 'POLYFILLS'
 			#
 			|
 			|
